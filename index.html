@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Addart | Sanatla Buluşan Tasarımlar</title>
+    <meta name="description" content="Add art to your Adda. Kurumsal kimlik, etkinlik tasarımı ve kişiye özel sanat çalışmaları.">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">ADD<span>ART</span></a>
+                <ul class="nav-links">
+                    <li><a href="#categories">Hizmetler</a></li>
+                    <li><a href="#references">Referanslar</a></li>
+                    <li><a href="#about">Hikayemiz</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+                <div class="selection-counter" id="selection-btn">
+                    <span>Seçimlerim</span>
+                    <div class="badge" id="cart-count">0</div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <p style="text-transform: uppercase; letter-spacing: 3px; font-weight: 600; color: var(--accent-color); margin-bottom: 1rem;">Add art to your "Adda"</p>
+                    <h1>Sıradan Anları <span>Sanata</span> Dönüştürün</h1>
+                    <p>Kurumsal kimlikten düğün davetiyelerine, dijital tablolardan özel mühürlere kadar her detayı estetikle buluşturuyoruz.</p>
+                    <div class="hero-btns">
+                        <a href="#categories" class="btn">Hizmetleri Keşfet</a>
+                        <a href="https://wa.me/905330377707?text=Merhaba%20Addart,%20bilgi%20almak%20istiyorum." target="_blank" class="btn btn-outline" style="border-color: var(--accent-color); color: var(--accent-color);">WhatsApp'tan Yazın</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg" id="hero-image"></div>
+        </section>
+
+        <!-- Category Section -->
+        <section id="categories" class="container" style="padding: 10rem 2rem;">
+            <h2 class="section-title">Hizmet Kategorilerimiz</h2>
+            <div class="category-grid">
+                <!-- Kurumsal Kimlik -->
+                <div class="category-card" data-category="kurumsal">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?q=80&w=1000&auto=format&fit=crop" alt="Corporate Design">
+                    </div>
+                    <div class="card-body">
+                        <h3>Kurumsal Kimlik</h3>
+                        <p>Markanızın karakterini yansıtan profesyonel çözümler.</p>
+                        <ul class="service-list">
+                            <li><button class="add-to-quote" data-service="Logo Tasarımı">Logo Tasarımı +</button></li>
+                            <li><button class="add-to-quote" data-service="Kartvizit & Antetli">Kartvizit & Antetli +</button></li>
+                            <li><button class="add-to-quote" data-service="Gala Branding">Gala & Etkinlik Branding +</button></li>
+                            <li><button class="add-to-quote" data-service="Kurumsal Paket 1">Kurumsal Paket 1 (Başlangıç) +</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Etkinlik Tasarımı -->
+                <div class="category-card" data-category="etkinlik">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=1000&auto=format&fit=crop" alt="Event Design">
+                    </div>
+                    <div class="card-body">
+                        <h3>Etkinlik Tasarımı</h3>
+                        <p>Düğün, nişan ve özel kutlamalarınız için zarif detaylar.</p>
+                        <ul class="service-list">
+                            <li><button class="add-to-quote" data-service="Davetiye Tasarımı">Davetiye Tasarımı +</button></li>
+                            <li><button class="add-to-quote" data-service="Menü & Masa Kartı">Menü & Masa Kartı +</button></li>
+                            <li><button class="add-to-quote" data-service="Özel Mühür Seti">Özel Mühür & Püskül Seti +</button></li>
+                            <li><button class="add-to-quote" data-service="Hoşgeldin Panosu">Hoşgeldin Panosu +</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kişiye Özel -->
+                <div class="category-card" data-category="kisisel">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop" alt="Personal Art">
+                    </div>
+                    <div class="card-body">
+                        <h3>Kişiye Özel</h3>
+                        <p>Yaşam alanlarınıza değer katan özgün sanat eserleri.</p>
+                        <ul class="service-list">
+                            <li><button class="add-to-quote" data-service="Dijital Tablo">Dijital Portre & Tablo +</button></li>
+                            <li><button class="add-to-quote" data-service="Yağlı Boya Tablo">Yağlı Boya Tablo +</button></li>
+                            <li><button class="add-to-quote" data-service="T-shirt Tasarımı">Özel Tasarım T-shirt +</button></li>
+                            <li><button class="add-to-quote" data-service="Şişe Tasarımı">Hediyelik Şişe Tasarımı +</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selection Drawer (Cart) -->
+        <div class="selection-drawer" id="selection-drawer">
+            <div class="drawer-header">
+                <h3>Seçimleriniz</h3>
+                <button id="close-drawer">X</button>
+            </div>
+            <div class="drawer-content" id="selected-items-list">
+                <!-- Dynamic items -->
+            </div>
+            <div class="drawer-footer">
+                <button class="btn btn-block" id="whatsapp-request">WhatsApp ile Teklif Al</button>
+            </div>
+        </div>
+
+        <section id="references" class="container" style="padding: 10rem 2rem;">
+            <p style="text-align: center; color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; margin-bottom: 1rem;">Mutlu Müşteriler</p>
+            <h2 class="section-title" style="text-align: center; margin-bottom: 5rem;">Bize Güvenenler</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem;">
+                <div style="padding: 3rem; background: var(--secondary-color); border-radius: 20px; position: relative;">
+                    <span style="font-size: 4rem; color: var(--accent-color); opacity: 0.2; position: absolute; top: 10px; left: 20px;">"</span>
+                    <p style="font-style: italic; margin-bottom: 2rem; position: relative; z-index: 1;">"10. yıl yemeğimizin organizasyonuna destekleri için Addart'a çok teşekkür ederiz. Her detay kusursuzdu."</p>
+                    <h4 style="color: var(--accent-color); font-family: var(--font-serif); font-size: 1.4rem;">Sarıyer Leo Kulübü</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Gala Yemeği Organizasyonu</p>
+                </div>
+                <div style="padding: 3rem; background: var(--secondary-color); border-radius: 20px; position: relative;">
+                    <span style="font-size: 4rem; color: var(--accent-color); opacity: 0.2; position: absolute; top: 10px; left: 20px;">"</span>
+                    <p style="font-style: italic; margin-bottom: 2rem; position: relative; z-index: 1;">"Davetiyelerimizdeki mühür ve püskül detayları herkesi hayran bıraktı. Tam istediğimiz gibi zarif ve şık."</p>
+                    <h4 style="color: var(--accent-color); font-family: var(--font-serif); font-size: 1.4rem;">Melis & Nihat</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Düğün Davetiyesi & Branding</p>
+                </div>
+                <div style="padding: 3rem; background: var(--secondary-color); border-radius: 20px; position: relative;">
+                    <span style="font-size: 4rem; color: var(--accent-color); opacity: 0.2; position: absolute; top: 10px; left: 20px;">"</span>
+                    <p style="font-style: italic; margin-bottom: 2rem; position: relative; z-index: 1;">"Kişiye özel illüstrasyon çalışması evimizin en değerli parçası oldu. Ellerinize sağlık!"</p>
+                    <h4 style="color: var(--accent-color); font-family: var(--font-serif); font-size: 1.4rem;">Kübra & Talha</h4>
+                    <p style="font-size: 0.8rem; opacity: 0.6;">Kişiye Özel Sanat Çalışması</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" style="background: var(--secondary-color); padding: 10rem 0;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <p style="color: var(--accent-color); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem;">Hikayemiz</p>
+                        <h2 class="section-title" style="margin-bottom: 1.5rem;">Sanatın "Adda" Hali</h2>
+                        <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 1.5rem;">
+                            <b>Addart</b> ismi, Art & Design (A&D) ve "Ekle" (Add) kelimelerinin birleşiminden doğdu. İlhamımızı ise dostların bir araya gelip güzel vakit geçirdiği, kutlamalar yaptığı yer anlamına gelen Hintçe <b>"Adda"</b> kelimesinden alıyoruz.
+                        </p>
+                        <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 2rem;">
+                            Misyonumuz, sizin en özel "Adda" anlarınıza sanatsal bir dokunuş eklemek. Davetiyelerden kurumsal kimliğe, her projede bu birleştirici ruhu yaşatıyoruz.
+                        </p>
+                    </div>
+                    <div style="position: relative;">
+                        <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop" alt="Studio" style="width: 100%; border-radius: 10px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        <div style="position: absolute; bottom: -20px; right: -20px; width: 100px; height: 100px; border: 2px solid var(--accent-color); z-index: -1;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="container" style="padding: 10rem 2rem;">
+            <h2 class="section-title">Koleksiyon</h2>
+            <div class="gallery-grid">
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?q=80&w=1000&auto=format&fit=crop" alt="Reference 1">
+                    <div class="art-info"><h3>Sarıyer Leo</h3><p>Kurumsal Gala Tasarımı</p></div>
+                </div>
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1510070612790-059752f19ca9?q=80&w=1000&auto=format&fit=crop" alt="Reference 2">
+                    <div class="art-info"><h3>Melis & Nihat</h3><p>Mühürlü Davetiye Seti</p></div>
+                </div>
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?q=80&w=1000&auto=format&fit=crop" alt="Reference 3">
+                    <div class="art-info"><h3>Addart Concept</h3><p>Dijital Portre Serisi</p></div>
+                </div>
+                <div class="art-card">
+                    <img src="https://images.unsplash.com/photo-1616075131518-97300f892801?q=80&w=1000&auto=format&fit=crop" alt="Reference 4">
+                    <div class="art-info"><h3>Kübra & Talha</h3><p>Özel İllüstrasyon</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer style="padding: 4rem 0; background: var(--secondary-color);">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="#" class="logo">ADD<span>ART</span></a>
+            <div style="display: flex; gap: 2rem;">
+                <a href="https://www.instagram.com/addart_com/" target="_blank" style="color: var(--text-color); opacity: 0.5; text-decoration: none; font-weight: 600;">Instagram</a>
+                <a href="https://wa.me/905330377707" target="_blank" style="color: var(--text-color); opacity: 0.5; text-decoration: none; font-weight: 600;">WhatsApp</a>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+</body>
+</html>
