@@ -15,12 +15,26 @@ window.addEventListener('scroll', () => {
 // Selection Drawer Logic
 const selectionBtn = document.querySelector('#selection-btn');
 const drawer = document.querySelector('#selection-drawer');
+const overlay = document.querySelector('#drawer-overlay');
 const closeDrawer = document.querySelector('#close-drawer');
 const cartCount = document.querySelector('#cart-count');
 const selectedList = document.querySelector('#selected-items-list');
 
-selectionBtn.addEventListener('click', () => drawer.classList.add('open'));
-closeDrawer.addEventListener('click', () => drawer.classList.remove('open'));
+const toggleDrawer = (open) => {
+  if (open) {
+    drawer.classList.add('open');
+    overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  } else {
+    drawer.classList.remove('open');
+    overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+};
+
+selectionBtn.addEventListener('click', () => toggleDrawer(true));
+closeDrawer.addEventListener('click', () => toggleDrawer(false));
+overlay.addEventListener('click', () => toggleDrawer(false));
 
 // Add to Quote Logic
 document.querySelectorAll('.add-to-quote').forEach(button => {
@@ -29,7 +43,7 @@ document.querySelectorAll('.add-to-quote').forEach(button => {
     if (!selectedServices.includes(service)) {
       selectedServices.push(service);
       updateUI();
-      drawer.classList.add('open');
+      toggleDrawer(true);
     }
   });
 });
